@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chalkboard</title>
+    <link type="text/css" href="chalkstyle.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="chalkboard.js"></script>
+  </head>
+  <body>
+    <div class="left">
+      <canvas id="chalkboard" width="975" height="500"> </canvas>
+    </div>
+    <!-- end of left -->
+    <div class="toolbox">
+      <div class="column-left">
+        <br />Pick a tool:
+        <select id="tools">
+          <option value="pen">Pen</option>
+          <option value="eraser">Eraser</option>
+        </select>
+        <a id="clear">Clear</a> <br /><br />
+        Choose the brush's width
+        <div id="width">
+          <input type="text" readonly="readonly" id="widthval" />
+        </div>
+        <!-- end of width -->
+      </div>
+      <!-- end of box left -->
+      <div class="column-right">
+        <br />Pick a color
+        <div id="redbox">
+          <div id="red">
+            <input type="text" readonly="readonly" id="redval" />
+          </div>
+          <!-- end of red -->
+        </div>
+        <!-- end of redbox -->
+        <div id="greenbox">
+          <div id="green">
+            <input type="text" readonly="readonly" id="greenval" />
+          </div>
+          <!-- end of green -->
+        </div>
+        <!-- end of greenbox-->
+        <div id="bluebox">
+          <div id="blue">
+            <input type="text" readonly="readonly" id="blueval" />
+          </div>
+          <!-- end of blue-->
+        </div>
+        <!-- end of sliders -->
+        <div id="colorswatch">
+          <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+        </div>
+        <!-- end of colorswatch-->
+      </div>
+      <!-- end of box right-->
+    </div>
+    <!-- end of toolbox -->
+  </body>
+</html>

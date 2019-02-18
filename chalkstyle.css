@@ -1,0 +1,242 @@
+/* Application level styling */
+
+body {
+  font-family: 'Kai';
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#chalkboard {
+  background-color: #000;
+  cursor: crosshair;
+}
+
+.left {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+
+.toolbox {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #e3e3e3;
+  height: 200px;
+}
+
+.column-left {
+  float: left;
+  width: 50%;
+  background-color: #f2f2f2;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 180px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.select {
+  background: transparent;
+}
+
+#clear {
+  background-color: gray;
+  color: white;
+  border: 1px solid #f2f2f2;
+  line-height: 10px;
+  padding: 8px;
+}
+
+#clear:hover {
+  background-color: #a1a1a1;
+  cursor: pointer;
+}
+
+.column-right {
+  float: right;
+  width: 50%;
+  background-color: #f2f2f2;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 180px;
+  border-left: 2px solid #b4b4b4;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+#red,
+#green,
+#blue,
+#width {
+  width: 250px;
+  margin: 15px;
+}
+
+#redval,
+#greenval,
+#blueval,
+#widthval {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  border: none;
+  width: 30px;
+  font-family: 'Kai';
+  background: transparent;
+}
+
+#redbox,
+#greenbox,
+#bluebox {
+  left: 10px;
+  height: 25px;
+  width: 300px;
+  margin: 0;
+}
+
+#colorswatch {
+  margin: 20px 0 0 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#swatch {
+  width: 100px;
+  height: 100px;
+  background-image: none;
+}
+
+#red .ui-slider-range {
+  background: #ed1c24;
+}
+
+#green .ui-slider-range {
+  background: #32b141;
+}
+
+#blue .ui-slider-range {
+  background: #002bb8;
+}
+
+#width .ui-slider-range {
+  background: #515151;
+}
+
+.ui-slider {
+  position: relative;
+  text-align: center;
+  outline: 1px solid gray;
+}
+
+.ui-slider-handle {
+  background: gray;
+  position: absolute;
+  z-index: 2;
+  width: 0.5em;
+  height: 0.8em;
+  cursor: pointer;
+}
+
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+}
+
+.ui-slider-horizontal {
+  height: 0.8em;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+
+.ui-slider-vertical {
+  height: 100px;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.3em;
+  margin-left: 0;
+  margin-bottom: -0.6em;
+}
+
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
+
+/* Tabs
+----------------------------------*/
+.ui-tabs {
+  padding: 0.2em;
+  zoom: 1;
+}
+.ui-tabs .ui-tabs-nav {
+  list-style: none;
+  position: relative;
+  padding: 0.2em 0.2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+  position: relative;
+  float: left;
+  border-bottom-width: 0 !important;
+  margin: 0 0.2em -1px 0;
+  padding: 0;
+}
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  padding-bottom: 1px;
+  border-bottom-width: 0;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-state-processing a {
+  cursor: text;
+}
+.ui-tabs .ui-tabs-nav li a,
+.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer;
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel {
+  padding: 1em 1.4em;
+  display: block;
+  border-width: 0;
+  background: none;
+}
+.ui-tabs .ui-tabs-hide {
+  display: none !important;
+}
+
+@font-face {
+  font-family: 'Kai';
+  src: url('fonts/abeatbyKaiRegular.otf');
+}
